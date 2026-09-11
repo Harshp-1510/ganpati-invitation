@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function Home() {
   const [opened, setOpened] = useState(false);
   const [closing, setClosing] = useState(false);
+  const [musicPlaying, setMusicPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleOpen = () => {
     setClosing(true);
@@ -20,6 +22,26 @@ export default function Home() {
       "_blank"
     );
   };
+
+  const toggleMusic = async () => {
+  const audio = audioRef.current;
+
+  if (!audio) return;
+
+  try {
+    if (audio.paused) {
+      await audio.play();
+      setMusicPlaying(true);
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+      setMusicPlaying(false);
+    }
+  } catch (error) {
+    console.error("Music error:", error);
+    setMusicPlaying(false);
+  }
+};
 
   return (
     <main className="ganpati-page">
@@ -42,15 +64,15 @@ export default function Home() {
               <span>◆</span>
             </div>
 
-           <button
-            className="tap-button"
-            onClick={handleOpen}
-            aria-label="आमंत्रण उघडा"
-          >
-            <div className="opening-circle">
+            <button
+              className="tap-button"
+              onClick={handleOpen}
+              aria-label="आमंत्रण उघडा"
+            >
+              <div className="opening-circle">
                 ॥ श्री गणेशाय नमः ॥
-            </div>
-          </button>
+              </div>
+            </button>
 
             <div className="gold-divider">
               <span>◆</span>
@@ -69,10 +91,38 @@ export default function Home() {
         <div className="main-content">
 
           {/* =================================================
+              MUSIC BUTTON
+          ================================================= */}
+
+          <button
+            className={`music-button ${
+              musicPlaying ? "playing" : ""
+            }`}
+            onClick={toggleMusic}
+            aria-label={
+              musicPlaying
+                ? "संगीत बंद करा"
+                : "संगीत सुरू करा"
+            }
+          >
+            {musicPlaying ? "🔊" : "🎵"}
+          </button>
+
+          <audio
+          ref={audioRef}
+          loop
+          preload="auto"
+        >
+          <source src="/ganpati-music.mp3" type="audio/mpeg" />
+        </audio>
+
+
+          {/* =================================================
               HEADER
           ================================================= */}
 
           <header className="top-header">
+
             <div className="ganesh-symbol">
               ॐ
             </div>
@@ -80,6 +130,7 @@ export default function Home() {
             <div className="ganesh-mantra">
               ॥ श्री गणेशाय नमः ॥
             </div>
+
           </header>
 
 
@@ -94,11 +145,19 @@ export default function Home() {
             </p>
 
             <h1 className="main-title">
-              <span>बाप्पाचे</span>
-              <span>आगमन</span>
+
+              <span>
+                बाप्पाचे
+              </span>
+
+              <span>
+                आगमन
+              </span>
+
             </h1>
 
             <div className="ganpati-container">
+
               <div className="arch-border">
 
                 <img
@@ -108,6 +167,7 @@ export default function Home() {
                 />
 
               </div>
+
             </div>
 
           </section>
@@ -135,12 +195,7 @@ export default function Home() {
               <span>◆</span>
             </div>
 
-
             <div className="main-invitation">
-
-              <span className="english-title">
-                INVITATION
-              </span>
 
               <h1>
                 सस्नेह आमंत्रण
@@ -170,10 +225,6 @@ export default function Home() {
 
           <section className="festival-section">
 
-            <p className="festival-small">
-              FESTIVAL
-            </p>
-
             <h2 className="festival-title">
               गणेश उत्सव
             </h2>
@@ -181,7 +232,6 @@ export default function Home() {
             <div className="gold-divider">
               <span>◆</span>
             </div>
-
 
             {/* स्थापना */}
 
@@ -193,25 +243,6 @@ export default function Home() {
 
               <h3>
                 सोमवार, १४ सप्टेंबर २०२६
-              </h3>
-
-            </div>
-
-
-            {/* आरती */}
-
-            <div className="info-card aarti-card">
-
-              <p className="card-label">
-                आरती वेळ
-              </p>
-
-              <h3>
-                सकाळी ८:००
-              </h3>
-
-              <h3>
-                सायंकाळी ७:३०
               </h3>
 
             </div>
@@ -243,10 +274,6 @@ export default function Home() {
           ================================================= */}
 
           <section className="location-section">
-
-            <p className="location-small">
-              LOCATION
-            </p>
 
             <h2 className="location-title">
               ठिकाण

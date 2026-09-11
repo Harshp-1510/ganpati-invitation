@@ -1,0 +1,2387 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600;700;800&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    "Noto Serif Devanagari",
+    serif;
+
+  background: #160711;
+
+  color: #f3e7c7;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.ganpati-page {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(104, 42, 63, 0.30),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 15% 60%,
+      rgba(86, 35, 53, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #180813 0%,
+      #210a18 45%,
+      #180711 100%
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATIVE PATTERN
+========================================================= */
+
+.ganpati-page::before {
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  opacity: 0.13;
+
+  background-image:
+    radial-gradient(
+      ellipse at center,
+      transparent 25%,
+      rgba(180, 135, 58, 0.20) 26%,
+      transparent 28%
+    );
+
+  background-size: 75px 75px;
+}
+
+
+/* =========================================================
+   TOP HEADER
+========================================================= */
+
+.top-header {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  padding:
+    35px
+    28px
+    10px;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   GANESH SYMBOL
+========================================================= */
+
+.ganesh-symbol {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #dfb84f;
+
+  font-family:
+    "Tiro Devanagari Marathi",
+    serif;
+
+  font-size: 32px;
+
+  border:
+    1px solid
+    rgba(223, 184, 79, 0.25);
+}
+
+
+/* =========================================================
+   MANTRA
+========================================================= */
+
+.ganesh-mantra {
+  margin-left: 13px;
+
+  color: #c9a34e;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  padding:
+    55px
+    18px
+    20px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   HERO SMALL TEXT
+========================================================= */
+
+.welcome-text {
+  color: #e7d6a9;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  margin-bottom: 14px;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.main-title {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0;
+
+  font-family:
+    "Tiro Devanagari Marathi",
+    "Noto Serif Devanagari",
+    serif;
+
+  font-size:
+    clamp(
+      70px,
+      17vw,
+      112px
+    );
+
+  font-weight: 700;
+
+  line-height: 0.95;
+
+  letter-spacing: -4px;
+
+  color: #d3a344;
+
+  text-shadow:
+    0 3px 0 #93691f,
+    0 7px 15px
+    rgba(0, 0, 0, 0.40);
+}
+
+
+.main-title span:first-child {
+  margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   GANPATI CONTAINER
+========================================================= */
+
+.ganpati-container {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin-top: 50px;
+}
+
+
+/* =========================================================
+   ARCH
+========================================================= */
+
+.arch-border {
+  position: relative;
+
+  width: 420px;
+
+  max-width: 82vw;
+
+  height: 600px;
+
+  overflow: hidden;
+
+  border-radius:
+    215px
+    215px
+    25px
+    25px;
+
+  border:
+    3px solid
+    #dcb75b;
+
+  background:
+    radial-gradient(
+      circle,
+      #25101b,
+      #15070e
+    );
+
+  box-shadow:
+    inset 0 0 0 2px
+    rgba(87, 53, 14, 0.85),
+
+    0 0 25px
+    rgba(220, 180, 82, 0.10);
+}
+
+
+/* Inner golden arch */
+
+.arch-border::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  z-index: 4;
+
+  border:
+    1px solid
+    rgba(239, 207, 111, 0.95);
+
+  border-radius:
+    207px
+    207px
+    18px
+    18px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   GANPATI IMAGE
+========================================================= */
+
+.ganpati-image {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: center bottom;
+
+  transform: scale(1.02);
+
+  filter:drop-shadow(0 10px 15px
+      rgba(0, 0, 0, 0.35)
+    );
+}
+
+@keyframes ganpatiFloat {
+
+  0%,
+  100% {
+    transform:
+      scale(1.03)
+      translateY(0);
+  }
+  
+  50% {
+    transform:
+      scale(1.03)
+      translateY(-6px);
+  }
+
+}
+
+.invitation-intro {
+  text-align: center;
+  padding: 45px 20px 70px;
+  color: #e2b84b;
+}
+
+.invitation-intro h2 {
+  margin: 12px 0 8px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.small-invite {
+  color: #e8d7b0;
+  font-size: 20px;
+  margin: 0;
+}
+
+
+.main-invitation {
+  margin-top: 110px;
+}
+
+.english-title {
+  display: block;
+  color: #d9c8a1;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+}
+
+.main-invitation h1 {
+  margin: 0;
+  color: #d9a936;
+  font-size: clamp(55px, 8vw, 100px);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.main-invitation p {
+  max-width: 800px;
+  margin: 25px auto;
+  color: #d8c9aa;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.bottom {
+  margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+
+  .invitation-intro {
+    padding: 30px 15px 50px;
+  }
+
+  .invitation-intro h2 {
+    font-size: 24px;
+  }
+
+  .small-invite {
+    font-size: 17px;
+  }
+
+  .main-invitation {
+    margin-top: 70px;
+  }
+
+  .main-invitation h1 {
+    font-size: 48px;
+  }
+
+  .main-invitation p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .decor-line {
+    width: 150px;
+  }
+
+  .decor-line::before,
+  .decor-line::after {
+    width: 55px;
+  }
+}
+
+/* =========================================================
+   FESTIVAL SECTION
+========================================================= */
+
+.festival-section {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  padding:
+    80px
+    18px
+    50px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   FESTIVAL SMALL
+========================================================= */
+
+.festival-small {
+  font-family: Georgia, serif;
+
+  color: #e0cc96;
+
+  font-size: 15px;
+
+  letter-spacing: 6px;
+
+  margin-bottom: 17px;
+}
+
+
+/* =========================================================
+   FESTIVAL TITLE
+========================================================= */
+
+.festival-title {
+  margin: 0;
+
+  font-family:
+    "Tiro Devanagari Marathi",
+    "Noto Serif Devanagari",
+    serif;
+
+  font-size:
+    clamp(
+      50px,
+      12vw,
+      80px
+    );
+
+  line-height: 1.1;
+
+  font-weight: 700;
+
+  color: #d0a044;
+
+  text-shadow:
+    0 3px 0 #936b27,
+    0 6px 15px
+    rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================================
+   GOLD DIVIDER
+========================================================= */
+
+.gold-divider {
+  width: 190px;
+  height: 1px;
+
+  margin:
+    38px
+    auto
+    60px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #bd8d36;
+}
+
+
+.gold-divider::before,
+.gold-divider::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #bd8d36
+    );
+}
+
+
+.gold-divider::after {
+  background:
+    linear-gradient(
+      90deg,
+      #bd8d36,
+      transparent
+    );
+}
+
+
+.gold-divider span {
+  margin: 0 10px;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   INFORMATION CARD
+========================================================= */
+
+.info-card {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 520px;
+
+  min-height: 185px;
+
+  margin:
+    0
+    auto
+    28px;
+
+  padding:
+    38px
+    20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  border-radius: 35px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(45, 15, 34, 0.75),
+      rgba(17, 6, 15, 0.90)
+    );
+
+  border:
+    1px solid
+    rgba(184, 137, 54, 0.30);
+
+  box-shadow:
+    inset 0 0 30px
+    rgba(0, 0, 0, 0.15),
+
+    0 15px 35px
+    rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   CARD LABEL
+========================================================= */
+
+.card-label {
+  color: #ad8b49;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.info-card h3 {
+  margin: 0;
+
+  font-family:
+    "Tiro Devanagari Marathi",
+    "Noto Serif Devanagari",
+    serif;
+
+  color: #f4e8c8;
+
+  font-size:
+    clamp(
+      30px,
+      7vw,
+      46px
+    );
+
+  line-height: 1.4;
+
+  font-weight: 700;
+
+  text-shadow:
+    0 3px 8px
+    rgba(0, 0, 0, 0.40);
+}
+
+
+/* =========================================================
+   AARTI CARD
+========================================================= */
+
+.aarti-card {
+  min-height: 235px;
+
+  padding-top: 42px;
+}
+
+
+.aarti-card h3 {
+  font-size:
+    clamp(
+      30px,
+      7vw,
+      45px
+    );
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TEXT CARD
+========================================================= */
+
+.text-card {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 520px;
+
+  margin:
+    50px
+    auto
+    40px;
+
+  padding:
+    40px
+    28px;
+
+  border-radius: 30px;
+
+  background:
+    rgba(27, 9, 22, 0.70);
+
+  border:
+    1px solid
+    rgba(185, 140, 56, 0.22);
+
+  color: #d4c49c;
+
+  font-size: 16px;
+
+  line-height: 2.15;
+
+  text-align: center;
+
+  box-shadow:
+    inset 0 0 25px
+    rgba(0, 0, 0, 0.15);
+}
+
+
+.text-card p + p {
+  margin-top: 34px;
+}
+
+
+/* =========================================================
+   PROGRAM
+========================================================= */
+
+.program-section {
+  width: 100%;
+
+  max-width: 520px;
+
+  margin:
+    55px
+    auto
+    20px;
+}
+
+
+.section-title {
+  text-align: center;
+
+  color: #d1a448;
+
+  font-size: 25px;
+
+  font-weight: 600;
+
+  margin-bottom: 22px;
+}
+
+
+/* Program container */
+
+.program-card {
+  padding:
+    8px
+    22px;
+
+  border-radius: 28px;
+
+  background:
+    rgba(15, 5, 13, 0.78);
+
+  border:
+    1px solid
+    rgba(183, 136, 52, 0.22);
+}
+
+
+/* Program row */
+
+.program-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding:
+    21px
+    5px;
+
+  border-bottom:
+    1px solid
+    rgba(190, 150, 70, 0.12);
+}
+
+
+.program-row:last-child {
+  border-bottom: none;
+}
+
+
+.program-row > span {
+  font-size: 25px;
+}
+
+
+.program-row strong {
+  display: block;
+
+  color: #e2c578;
+
+  font-size: 17px;
+
+  margin-bottom: 5px;
+}
+
+
+.program-row p {
+  color: #a99b7d;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   LOCATION SECTION
+========================================================= */
+
+.location-section {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  padding:
+    80px
+    18px
+    70px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   LOCATION SMALL
+========================================================= */
+
+.location-small {
+  font-family: Georgia, serif;
+
+  color: #ddc890;
+
+  font-size: 15px;
+
+  letter-spacing: 6px;
+
+  margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   LOCATION TITLE
+========================================================= */
+
+.location-title {
+  margin: 0;
+
+  font-family:
+    "Tiro Devanagari Marathi",
+    "Noto Serif Devanagari",
+    serif;
+
+  font-size:
+    clamp(
+      55px,
+      13vw,
+      80px
+    );
+
+  line-height: 1.1;
+
+  font-weight: 700;
+
+  color: #d0a044;
+
+  text-shadow:
+    0 3px 0 #936b27,
+    0 6px 15px
+    rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================================
+   LOCATION DIVIDER
+========================================================= */
+
+.location-divider {
+  width: 190px;
+
+  height: 30px;
+
+  margin:
+    38px
+    auto
+    65px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #bd8d36;
+}
+
+
+.location-divider::before,
+.location-divider::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #bd8d36
+    );
+}
+
+
+.location-divider::after {
+  background:
+    linear-gradient(
+      90deg,
+      #bd8d36,
+      transparent
+    );
+}
+
+
+.location-divider span {
+  margin: 0 10px;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+
+  overflow: hidden;
+
+  border-radius:
+    40px
+    40px
+    0
+    0;
+  border: 1px solid #d9a928;
+
+  background: #10060d;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.map-container iframe {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+  
+}
+
+/* Dark gradient on map */
+
+.map-container::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 45%;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(25, 7, 17, 0.95)
+    );
+}
+
+
+/* =========================================================
+   LOCATION CARD
+========================================================= */
+
+.location-card {
+  position: relative;
+
+  margin-top: -1px;
+
+  padding:
+    35px
+    20px
+    30px;
+
+  border-radius:
+    0
+    0
+    40px
+    40px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #1d0917,
+      #15070f
+    );
+
+  border:
+    1px solid
+    rgba(201, 158, 65, 0.22);
+
+  border-top: none;
+
+  box-shadow:
+    0 18px 40px
+    rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   LOCATION NAME
+========================================================= */
+
+.location-card h3 {
+  margin: 0 0 28px;
+
+  font-family:
+    "Tiro Devanagari Marathi",
+    "Noto Serif Devanagari",
+    serif;
+
+  color: #f3e7c8;
+
+  font-size:
+    clamp(
+      36px,
+      8vw,
+      52px
+    );
+
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   ADDRESS
+========================================================= */
+
+.address {
+  max-width: 420px;
+
+  margin:
+    0
+    auto
+    38px;
+
+  color: #bcae8e;
+
+  font-size: 17px;
+
+  line-height: 2.1;
+}
+
+
+/* =========================================================
+   MAP BUTTON
+========================================================= */
+
+.maps-button {
+  width: 270px;
+
+  max-width: 90%;
+
+  height: 80px;
+
+  border: none;
+
+  border-radius: 45px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d8aa45,
+      #f0c96e
+    );
+
+  color: #21100e;
+
+  font-family: Georgia, serif;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 30px
+    rgba(207, 158, 51, 0.22);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.maps-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(207, 158, 51, 0.35);
+}
+
+
+/* =========================================================
+   LOCATION FOOTER
+========================================================= */
+
+.location-footer {
+  margin-top: 24px;
+
+  color: #a98a43;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  padding:
+    30px
+    20px
+    70px;
+
+  text-align: center;
+}
+
+
+.footer-divider {
+  color: #bd8d36;
+
+  font-size: 12px;
+
+  letter-spacing: 8px;
+
+  margin-bottom: 20px;
+}
+
+
+.footer-main {
+  font-family:
+    "Tiro Devanagari Marathi",
+    serif;
+
+  color: #d4aa52;
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .top-header {
+    padding:
+      28px
+      25px
+      10px;
+  }
+
+
+  .hero {
+    padding-top: 45px;
+  }
+
+
+  .main-title {
+    font-size: 85px;
+  }
+
+
+  .arch-border {
+    width: 370px;
+
+    height: 550px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .ganpati-page {
+    min-height: 100vh;
+  }
+
+
+  /* Header */
+
+  .top-header {
+    padding:
+      25px
+      18px
+      8px;
+  }
+
+
+  .ganesh-symbol {
+    width: 42px;
+    height: 42px;
+
+    font-size: 28px;
+  }
+
+
+  .ganesh-mantra {
+    margin-left: 9px;
+
+    font-size: 11px;
+  }
+
+
+  .music-button {
+    width: 68px;
+    height: 68px;
+
+    font-size: 27px;
+  }
+
+  /* Hero */
+
+  .hero {
+    padding:
+      45px
+      15px
+      20px;
+  }
+
+
+  .welcome-text {
+    font-size: 16px;
+
+    margin-bottom: 13px;
+  }
+
+
+  .main-title {
+    font-size: 76px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .main-title span:first-child {
+    margin-bottom: 13px;
+  }
+
+
+  /* Ganpati */
+
+  .ganpati-container {
+    margin-top: 42px;
+  }
+
+
+  .arch-border {
+    width: 330px;
+
+    max-width: 82vw;
+
+    height: 520px;
+
+    border-radius:
+      170px
+      170px
+      20px
+      20px;
+  }
+
+
+  /* Festival */
+
+  .festival-section {
+    padding:
+      70px
+      16px
+      45px;
+  }
+
+
+  .festival-small {
+    font-size: 12px;
+
+    letter-spacing: 5px;
+  }
+
+
+  .festival-title {
+    font-size: 54px;
+  }
+
+
+  .gold-divider {
+    margin:
+      30px
+      auto
+      55px;
+  }
+
+
+  /* Cards */
+
+  .info-card {
+    min-height: 180px;
+
+    padding:
+      35px
+      15px;
+
+    border-radius: 32px;
+  }
+
+
+  .card-label {
+    font-size: 17px;
+
+    margin-bottom: 17px;
+  }
+
+
+  .info-card h3 {
+    font-size: 31px;
+  }
+
+
+  .aarti-card {
+    min-height: 225px;
+
+    padding-top: 38px;
+  }
+
+
+  .aarti-card h3 {
+    font-size: 30px;
+  }
+
+
+  /* Text */
+
+  .text-card {
+    padding:
+      35px
+      21px;
+
+    margin:
+      45px
+      auto
+      35px;
+
+    font-size: 14px;
+
+    line-height: 2.15;
+
+    border-radius: 28px;
+  }
+
+
+  .text-card p + p {
+    margin-top: 30px;
+  }
+
+
+  /* Program */
+
+  .program-section {
+    margin-top: 50px;
+  }
+
+
+  .section-title {
+    font-size: 22px;
+  }
+
+
+  .program-card {
+    padding:
+      7px
+      17px;
+
+    border-radius: 25px;
+  }
+
+
+  .program-row {
+    padding:
+      18px
+      2px;
+
+    gap: 14px;
+  }
+
+
+  .program-row > span {
+    font-size: 22px;
+  }
+
+
+  .program-row strong {
+    font-size: 15px;
+  }
+
+
+  .program-row p {
+    font-size: 11px;
+  }
+
+
+  /* Location */
+
+  .location-section {
+    padding:
+      60px
+      16px
+      55px;
+  }
+
+
+  .location-small {
+    font-size: 12px;
+
+    letter-spacing: 5px;
+  }
+
+
+  .location-title {
+    font-size: 56px;
+  }
+
+
+  .location-divider {
+    margin:
+      30px
+      auto
+      55px;
+  }
+
+
+  /* Map */
+
+  .map-container {
+    height: 320px;
+
+    border-radius:
+      35px
+      35px
+      0
+      0;
+  }
+
+
+  /* Location card */
+
+  .location-card {
+    padding:
+      30px
+      18px
+      25px;
+
+    border-radius:
+      0
+      0
+      35px
+      35px;
+  }
+
+
+  .location-card h3 {
+    font-size: 37px;
+
+    margin-bottom: 27px;
+  }
+
+
+  .address {
+    font-size: 15px;
+
+    line-height: 2;
+
+    margin-bottom: 35px;
+  }
+
+
+  .maps-button {
+    width: 270px;
+
+    height: 78px;
+
+    font-size: 19px;
+  }
+
+
+  .location-footer {
+    font-size: 13px;
+  }
+
+
+  /* Footer */
+
+  .footer {
+    padding:
+      25px
+      18px
+      60px;
+  }
+
+
+  .footer-main {
+    font-size: 23px;
+  }
+
+
+  .footer-sub {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .top-header {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+
+  .ganesh-symbol {
+    width: 38px;
+    height: 38px;
+
+    font-size: 25px;
+  }
+
+
+  .ganesh-mantra {
+    font-size: 9px;
+  }
+
+
+  .music-button {
+    width: 60px;
+    height: 60px;
+
+    font-size: 24px;
+  }
+
+
+  .hero {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+  .main-title {
+    font-size: 64px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .arch-border {
+    width: 290px;
+
+    height: 460px;
+
+    border-radius:
+      150px
+      150px
+      18px
+      18px;
+  }
+
+
+  .festival-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  .festival-title {
+    font-size: 46px;
+  }
+
+
+  .info-card h3 {
+    font-size: 27px;
+  }
+
+
+  .aarti-card h3 {
+    font-size: 27px;
+  }
+
+
+  .text-card {
+    font-size: 13px;
+
+    padding:
+      30px
+      17px;
+  }
+
+
+  .location-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  .location-title {
+    font-size: 48px;
+  }
+
+
+  .map-container {
+    height: 410px;
+
+    border-radius:
+      30px
+      30px
+      0
+      0;
+  }
+
+
+  .location-card {
+    border-radius:
+      0
+      0
+      30px
+      30px;
+  }
+
+
+  .location-card h3 {
+    font-size: 32px;
+  }
+
+
+  .address {
+    font-size: 14px;
+  }
+
+
+  .maps-button {
+    width: 240px;
+
+    height: 70px;
+  }
+
+
+  .footer-main {
+    font-size: 21px;
+  }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 330px) {
+
+  .main-title {
+    font-size: 57px;
+  }
+
+
+  .arch-border {
+    width: 270px;
+
+    height: 420px;
+  }
+
+
+  .festival-title {
+    font-size: 42px;
+  }
+
+
+  .location-title {
+    font-size: 43px;
+  }
+
+}
+/* =================================================
+   TAP TO OPEN SCREEN
+================================================= */
+
+.opening-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(116, 67, 28, 0.20),
+      transparent 45%
+    ),
+    #170810;
+
+  overflow: hidden;
+
+  animation: openingAppear 1s ease forwards;
+}
+
+
+/* subtle background pattern */
+
+.opening-screen::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.08;
+
+  background-image:
+    radial-gradient(
+      circle,
+      #d4a63c 1px,
+      transparent 1px
+    );
+
+  background-size: 35px 35px;
+
+  animation: backgroundMove 15s linear infinite;
+}
+
+
+.opening-content {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  padding: 30px;
+
+  animation: openingContent 1.2s ease;
+}
+
+
+/* =================================================
+   OM
+================================================= */
+
+.opening-om {
+  font-size: 65px;
+
+  color: #d7aa43;
+
+  margin-bottom: 5px;
+
+  text-shadow:
+    0 0 10px rgba(215, 170, 67, 0.3);
+
+  animation: softGlow 2.5s infinite alternate;
+}
+
+
+.opening-mantra {
+  margin: 0;
+
+  color: #dfc27b;
+
+  font-size: 21px;
+}
+
+
+/* =================================================
+   DECORATION
+================================================= */
+
+.opening-top-line,
+.opening-bottom-line {
+  color: #d3a33d;
+
+  font-size: 18px;
+
+  margin: 20px auto;
+}
+
+
+.opening-decoration {
+  width: 180px;
+
+  margin: 25px auto;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: #d3a33d;
+}
+
+.opening-decoration::before,
+.opening-decoration::after {
+  content: "";
+
+  width: 65px;
+
+  height: 1px;
+
+  background: #9b7226;
+}
+
+.opening-decoration span {
+  margin: 0 12px;
+
+  font-size: 17px;
+}
+
+
+/* =================================================
+   GOLD CIRCLE
+================================================= */
+
+.opening-circle {
+  width: 150px;
+  height: 150px;
+
+  margin: 20px auto;
+
+  border-radius: 50%;
+
+  border: 2px solid #d5a83f;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 0 20px rgba(213, 168, 63, 0.25),
+    inset 0 0 20px rgba(213, 168, 63, 0.12);
+
+  animation: circlePulse 2.2s infinite;
+}
+
+
+/* =================================================
+   TAP BUTTON
+================================================= */
+.tap-button {
+  margin: 30px auto 0;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #e0bd68;
+
+  cursor: pointer;
+
+  animation: buttonFloat 2.5s infinite;
+
+  font-family: inherit;
+}
+
+
+/* Circle */
+
+.opening-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  border: 2px solid #d5a83f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 0 20px rgba(213, 168, 63, 0.25),
+    inset 0 0 20px rgba(213, 168, 63, 0.12);
+
+  animation: circlePulse 2.2s infinite;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* TAP TO OPEN */
+
+.tap-text {
+  margin-top: 22px;
+
+  color: #e0bd68;
+
+  font-size: 13px;
+
+  letter-spacing: 4px;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* Hover */
+
+.tap-button:hover .opening-circle {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 35px rgba(213, 168, 63, 0.45),
+    inset 0 0 25px rgba(213, 168, 63, 0.18);
+}
+
+
+
+
+/* Click */
+
+.tap-button:active .opening-circle {
+  transform: scale(0.96);
+}
+
+.opening-bappa {
+  margin-top: 25px;
+
+  color: #cbb487;
+
+  font-size: 16px;
+}
+
+
+/* =================================================
+   OPENING CLOSE ANIMATION
+================================================= */
+
+.opening-close {
+  animation: openingDisappear 0.7s ease forwards;
+}
+
+
+/* =================================================
+   MAIN CONTENT
+================================================= */
+
+.main-content {
+  animation: mainContentAppear 1.2s ease forwards;
+}
+
+
+/* =================================================
+   HERO ANIMATION
+================================================= */
+
+.main-content .top-header {
+  animation: slideDown 1s ease;
+}
+
+
+.main-content .hero {
+  animation: heroAppear 1.2s ease;
+}
+
+
+.main-content .ganpati-image {
+  animation: bappaAppear 1.5s ease;
+}
+
+
+/* =================================================
+   INVITATION ANIMATION
+================================================= */
+
+.invitation-intro {
+  animation: sectionAppear 1.2s ease;
+}
+
+
+.main-invitation h1 {
+  animation: titleAppear 1.2s ease;
+}
+
+
+/* =================================================
+   FESTIVAL
+================================================= */
+
+.festival-section {
+  animation: sectionAppear 1.3s ease;
+}
+
+
+.info-card {
+  animation: cardAppear 1s ease both;
+}
+
+
+.info-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.info-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.info-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+
+/* =================================================
+   LOCATION
+================================================= */
+
+.location-section {
+  animation: sectionAppear 1.3s ease;
+}
+
+
+.location-card {
+  animation: cardAppear 1s ease;
+}
+
+
+/* =================================================
+   FOOTER
+================================================= */
+
+.footer {
+  animation: sectionAppear 1.2s ease;
+}
+
+
+/* =================================================
+   KEYFRAMES
+================================================= */
+
+@keyframes openingAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes openingContent {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes openingDisappear {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
+
+@keyframes mainContentAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes heroAppear {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes bappaAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+@keyframes sectionAppear {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes titleAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes circlePulse {
+  0% {
+    transform: scale(1);
+
+    box-shadow:
+      0 0 15px rgba(213, 168, 63, 0.2);
+  }
+
+  50% {
+    transform: scale(1.04);
+
+    box-shadow:
+      0 0 35px rgba(213, 168, 63, 0.4);
+  }
+
+  100% {
+    transform: scale(1);
+
+    box-shadow:
+      0 0 15px rgba(213, 168, 63, 0.2);
+  }
+}
+
+
+@keyframes softGlow {
+  from {
+    opacity: 0.75;
+  }
+
+  to {
+    opacity: 1;
+
+    text-shadow:
+      0 0 25px rgba(215, 170, 67, 0.55);
+  }
+}
+
+
+@keyframes buttonFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes backgroundMove {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(35px);
+  }
+}
+
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media (max-width: 600px) {
+
+  .opening-om {
+    font-size: 48px;
+  }
+
+  .opening-mantra {
+    font-size: 18px;
+  }
+
+  .opening-circle {
+    width: 125px;
+    height: 125px;
+  }
+
+  .opening-circle-inner {
+    width: 105px;
+    height: 105px;
+
+    font-size: 45px;
+  }
+
+  .tap-button {
+    padding: 12px 28px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+  }
+
+  .opening-bappa {
+    font-size: 14px;
+  }
+
+}

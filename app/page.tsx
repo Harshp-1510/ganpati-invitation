@@ -5,10 +5,23 @@ import { useRef, useState } from "react";
 export default function Home() {
   const [opened, setOpened] = useState(false);
   const [closing, setClosing] = useState(false);
-  const [musicPlaying, setMusicPlaying] = useState(false);
+
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const handleOpen = () => {
+  const handleOpen = async () => {
+    // Start music when user taps Tap to Open
+    const audio = audioRef.current;
+
+    if (audio) {
+      try {
+        audio.currentTime = 0;
+        await audio.play();
+      } catch (error) {
+        console.error("Music could not start:", error);
+      }
+    }
+
+    // Opening animation
     setClosing(true);
 
     setTimeout(() => {
@@ -23,28 +36,26 @@ export default function Home() {
     );
   };
 
-  const toggleMusic = async () => {
-  const audio = audioRef.current;
-
-  if (!audio) return;
-
-  try {
-    if (audio.paused) {
-      await audio.play();
-      setMusicPlaying(true);
-    } else {
-      audio.pause();
-      audio.currentTime = 0;
-      setMusicPlaying(false);
-    }
-  } catch (error) {
-    console.error("Music error:", error);
-    setMusicPlaying(false);
-  }
-};
-
   return (
     <main className="ganpati-page">
+
+      {/* =================================================
+          BACKGROUND MUSIC
+          Starts automatically after Tap to Open
+          and continues forever
+      ================================================= */}
+
+      <audio
+        ref={audioRef}
+        loop
+        preload="auto"
+      >
+        <source
+          src="/ganpati-music.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+
 
       {/* =================================================
           FIRST SCREEN - TAP TO OPEN
@@ -52,7 +63,9 @@ export default function Home() {
 
       {!opened && (
         <section
-          className={`opening-screen ${closing ? "opening-close" : ""}`}
+          className={`opening-screen ${
+            closing ? "opening-close" : ""
+          }`}
         >
           <div className="opening-content">
 
@@ -89,32 +102,6 @@ export default function Home() {
 
       {opened && (
         <div className="main-content">
-
-          {/* =================================================
-              MUSIC BUTTON
-          ================================================= */}
-
-          <button
-            className={`music-button ${
-              musicPlaying ? "playing" : ""
-            }`}
-            onClick={toggleMusic}
-            aria-label={
-              musicPlaying
-                ? "संगीत बंद करा"
-                : "संगीत सुरू करा"
-            }
-          >
-            {musicPlaying ? "🔊" : "🎵"}
-          </button>
-
-          <audio
-          ref={audioRef}
-          loop
-          preload="auto"
-        >
-          <source src="/ganpati-music.mp3" type="audio/mpeg" />
-        </audio>
 
 
           {/* =================================================
@@ -233,6 +220,7 @@ export default function Home() {
               <span>◆</span>
             </div>
 
+
             {/* स्थापना */}
 
             <div className="info-card">
@@ -343,6 +331,7 @@ export default function Home() {
             </p>
 
           </footer>
+
 
         </div>
       )}

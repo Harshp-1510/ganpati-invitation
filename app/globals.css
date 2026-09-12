@@ -17,9 +17,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-
-  font-family:"Noto Serif Devanagari",serif;
-
+  font-family: "Noto Serif Devanagari", serif;
   background: #160711;
   color: #f3e7c7;
 }
@@ -39,7 +37,6 @@ select {
   position: relative;
   width: 100%;
   min-height: 100vh;
-
   overflow-x: hidden;
 
   background:
@@ -67,13 +64,10 @@ select {
 
 .ganpati-page::before {
   content: "";
-
   position: fixed;
   inset: 0;
-
   z-index: 0;
   pointer-events: none;
-
   opacity: 0.13;
 
   background-image:
@@ -88,91 +82,12 @@ select {
 }
 
 /* =========================================================
-   MUSIC BUTTON
-========================================================= */
-
-.music-button {
-  position: fixed;
-
-  top: 20px;
-  right: 20px;
-
-  z-index: 5000;
-
-  width: 55px;
-  height: 55px;
-
-  border: 1px solid #d5a83f;
-  border-radius: 50%;
-
-  background: rgba(23, 8, 16, 0.94);
-
-  color: #e0bd68;
-
-  font-size: 23px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-
-  box-shadow:
-    0 5px 20px rgba(0, 0, 0, 0.35);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background 0.3s ease;
-}
-
-.music-button:hover {
-  transform: scale(1.08);
-
-  background: rgba(213, 168, 63, 0.14);
-
-  box-shadow:
-    0 0 25px rgba(213, 168, 63, 0.4);
-}
-
-.music-button:active {
-  transform: scale(0.92);
-}
-
-.music-button.playing {
-  animation:
-    musicPulse 1.8s ease-in-out infinite;
-}
-
-/* =========================================================
-   MUSIC ANIMATION
-========================================================= */
-
-@keyframes musicPulse {
-  0% {
-    box-shadow:
-      0 0 5px rgba(213, 168, 63, 0.2);
-  }
-
-  50% {
-    box-shadow:
-      0 0 28px rgba(213, 168, 63, 0.6);
-  }
-
-  100% {
-    box-shadow:
-      0 0 5px rgba(213, 168, 63, 0.2);
-  }
-}
-
-/* =========================================================
    OPENING SCREEN
 ========================================================= */
 
 .opening-screen {
   position: fixed;
   inset: 0;
-
   z-index: 9999;
 
   display: flex;
@@ -191,15 +106,11 @@ select {
 
   overflow: hidden;
 
-  animation:
-    openingAppear 1s ease forwards;
+  animation: openingAppear 1s ease forwards;
 }
-
-/* Moving dots */
 
 .opening-screen::before {
   content: "";
-
   position: absolute;
   inset: 0;
 
@@ -214,8 +125,7 @@ select {
 
   background-size: 35px 35px;
 
-  animation:
-    backgroundMove 15s linear infinite;
+  animation: backgroundMove 15s linear infinite;
 }
 
 /* =========================================================
@@ -224,7 +134,6 @@ select {
 
 .opening-content {
   position: relative;
-
   z-index: 2;
 
   width: 100%;
@@ -239,8 +148,7 @@ select {
 
   text-align: center;
 
-  animation:
-    openingContent 1.2s ease;
+  animation: openingContent 1.2s ease;
 }
 
 /* =========================================================
@@ -250,9 +158,7 @@ select {
 .opening-om {
   color: #d7aa43;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: 65px;
   line-height: 1;
@@ -262,8 +168,7 @@ select {
   text-shadow:
     0 0 10px rgba(215, 170, 67, 0.3);
 
-  animation:
-    softGlow 2.5s infinite alternate;
+  animation: softGlow 2.5s infinite alternate;
 }
 
 /* =========================================================
@@ -309,7 +214,6 @@ select {
 
 .opening-divider b {
   color: #d6a72c;
-
   font-size: 8px;
   font-weight: 400;
 }
@@ -320,7 +224,6 @@ select {
 
 .tap-button {
   margin: 30px auto;
-
   padding: 0;
 
   border: none;
@@ -334,12 +237,9 @@ select {
 
   cursor: pointer;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
-  animation:
-    buttonFloat 2.5s infinite;
+  animation: buttonFloat 2.5s infinite;
 }
 
 .tap-button:hover .opening-circle {
@@ -375,21 +275,17 @@ select {
 
   color: #e0bd68;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: 17px;
   font-weight: 500;
-
   line-height: 1.6;
 
   box-shadow:
     0 0 20px rgba(213, 168, 63, 0.25),
     inset 0 0 20px rgba(213, 168, 63, 0.12);
 
-  animation:
-    circlePulse 2.2s infinite;
+  animation: circlePulse 2.2s infinite;
 
   transition:
     transform 0.3s ease,
@@ -401,8 +297,7 @@ select {
 ========================================================= */
 
 .opening-close {
-  animation:
-    openingDisappear 0.7s ease forwards;
+  animation: openingDisappear 0.7s ease forwards;
 }
 
 /* =========================================================
@@ -411,14 +306,12 @@ select {
 
 .top-header {
   position: relative;
-
   z-index: 3;
 
   width: 100%;
 
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
 
@@ -428,9 +321,7 @@ select {
 
   padding: 25px 18px 10px;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 }
 
 /* =========================================================
@@ -447,9 +338,7 @@ select {
 
   color: #dfb84f;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: 42px;
   line-height: 1.6;
@@ -464,13 +353,10 @@ select {
 
   color: #c9a34e;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: 16px;
   font-weight: 500;
-
   line-height: 1.7;
 
   text-align: center;
@@ -484,7 +370,6 @@ select {
 
 .hero {
   position: relative;
-
   z-index: 2;
 
   width: 100%;
@@ -496,8 +381,7 @@ select {
 
   text-align: center;
 
-  animation:
-    heroAppear 1.2s ease;
+  animation: heroAppear 1.2s ease;
 }
 
 /* =========================================================
@@ -507,9 +391,7 @@ select {
 .welcome-text {
   color: #e7d6a9;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: 18px;
   font-weight: 500;
@@ -518,8 +400,7 @@ select {
 
   line-height: 1.6;
 
-  animation:
-    fadeUp 1s ease 0.2s both;
+  animation: fadeUp 1s ease 0.2s both;
 }
 
 /* =========================================================
@@ -529,15 +410,12 @@ select {
 .main-title {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
 
   margin: 0;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: clamp(60px, 17vw, 112px);
 
@@ -553,8 +431,7 @@ select {
     0 3px 0 #93691f,
     0 7px 15px rgba(0, 0, 0, 0.4);
 
-  animation:
-    titleAppear 1.2s ease 0.3s both;
+  animation: titleAppear 1.2s ease 0.3s both;
 }
 
 .main-title span:first-child {
@@ -574,12 +451,12 @@ select {
 
   margin-top: 50px;
 
-  animation:
-    fadeUp 1.3s ease 0.4s both;
+  animation: fadeUp 1.3s ease 0.4s both;
 }
 
 /* =========================================================
    GANPATI ARCH
+   DESKTOP — UNCHANGED
 ========================================================= */
 
 .arch-border {
@@ -592,11 +469,13 @@ select {
 
   overflow: hidden;
 
-  border:
-    3px solid #dcb75b;
+  border: 3px solid #dcb75b;
 
   border-radius:
-    215px 215px 25px 25px;
+    215px
+    215px
+    25px
+    25px;
 
   background:
     radial-gradient(
@@ -608,30 +487,36 @@ select {
   box-shadow:
     inset 0 0 0 2px rgba(87, 53, 14, 0.85),
     0 0 25px rgba(220, 180, 82, 0.1);
+
+  transition:
+    width 0.4s ease,
+    height 0.4s ease,
+    border-width 0.4s ease;
 }
 
 /* Inner arch */
-
 .arch-border::before {
   content: "";
 
   position: absolute;
-
   inset: 7px;
 
   z-index: 4;
 
-  border:
-    1px solid rgba(239, 207, 111, 0.95);
+  border: 1px solid rgba(239, 207, 111, 0.95);
 
   border-radius:
-    207px 207px 18px 18px;
+    207px
+    207px
+    18px
+    18px;
 
   pointer-events: none;
 }
 
 /* =========================================================
    GANPATI IMAGE
+   DESKTOP — UNCHANGED
 ========================================================= */
 
 .ganpati-image {
@@ -664,7 +549,6 @@ select {
 
 .invitation-intro {
   position: relative;
-
   z-index: 2;
 
   text-align: center;
@@ -673,24 +557,19 @@ select {
 
   color: #e2b84b;
 
-  animation:
-    sectionAppear 1.2s ease;
+  animation: sectionAppear 1.2s ease;
 }
 
 .invitation-intro h2 {
   margin: 12px 0 8px;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: 30px;
   font-weight: 600;
-
   line-height: 1.5;
 
-  animation:
-    fadeUp 1s ease 0.2s both;
+  animation: fadeUp 1s ease 0.2s both;
 }
 
 .small-invite {
@@ -698,16 +577,12 @@ select {
 
   color: #e8d7b0;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: 20px;
-
   line-height: 1.6;
 
-  animation:
-    fadeUp 1s ease 0.3s both;
+  animation: fadeUp 1s ease 0.3s both;
 }
 
 /* =========================================================
@@ -719,8 +594,7 @@ select {
 
   margin: 110px auto 0;
 
-  animation:
-    sectionAppear 1.2s ease;
+  animation: sectionAppear 1.2s ease;
 }
 
 .main-invitation h1 {
@@ -728,9 +602,7 @@ select {
 
   color: #d9a936;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: clamp(48px, 8vw, 100px);
 
@@ -738,8 +610,7 @@ select {
 
   font-weight: 700;
 
-  animation:
-    titleAppear 1.2s ease 0.2s both;
+  animation: titleAppear 1.2s ease 0.2s both;
 }
 
 .main-invitation p {
@@ -749,16 +620,13 @@ select {
 
   color: #d8c9aa;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: 20px;
 
   line-height: 1.8;
 
-  animation:
-    fadeUp 1s ease 0.4s both;
+  animation: fadeUp 1s ease 0.4s both;
 }
 
 /* =========================================================
@@ -777,8 +645,7 @@ select {
 
   color: #bd8d36;
 
-  animation:
-    dividerAppear 1s ease both;
+  animation: dividerAppear 1s ease both;
 }
 
 .gold-divider::before,
@@ -820,7 +687,6 @@ select {
 
 .festival-section {
   position: relative;
-
   z-index: 2;
 
   width: 100%;
@@ -832,16 +698,13 @@ select {
 
   text-align: center;
 
-  animation:
-    sectionAppear 1.3s ease;
+  animation: sectionAppear 1.3s ease;
 }
 
 .festival-title {
   margin: 0;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: clamp(45px, 12vw, 80px);
 
@@ -855,8 +718,7 @@ select {
     0 3px 0 #936b27,
     0 6px 15px rgba(0, 0, 0, 0.4);
 
-  animation:
-    titleAppear 1s ease 0.15s both;
+  animation: titleAppear 1s ease 0.15s both;
 }
 
 /* =========================================================
@@ -892,15 +754,13 @@ select {
       rgba(17, 6, 15, 0.9)
     );
 
-  border:
-    1px solid rgba(184, 137, 54, 0.3);
+  border: 1px solid rgba(184, 137, 54, 0.3);
 
   box-shadow:
     inset 0 0 30px rgba(0, 0, 0, 0.15),
     0 15px 35px rgba(0, 0, 0, 0.18);
 
-  animation:
-    cardAppear 1s ease 0.2s both;
+  animation: cardAppear 1s ease 0.2s both;
 
   transition:
     transform 0.35s ease,
@@ -919,9 +779,7 @@ select {
 .card-label {
   color: #ad8b49;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: 18px;
   font-weight: 500;
@@ -932,9 +790,7 @@ select {
 .info-card h3 {
   margin: 0;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   color: #f4e8c8;
 
@@ -954,7 +810,6 @@ select {
 
 .text-card {
   position: relative;
-
   z-index: 2;
 
   width: 100%;
@@ -966,17 +821,13 @@ select {
 
   border-radius: 30px;
 
-  background:
-    rgba(27, 9, 22, 0.7);
+  background: rgba(27, 9, 22, 0.7);
 
-  border:
-    1px solid rgba(185, 140, 56, 0.22);
+  border: 1px solid rgba(185, 140, 56, 0.22);
 
   color: #d4c49c;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: 16px;
 
@@ -987,8 +838,7 @@ select {
   box-shadow:
     inset 0 0 25px rgba(0, 0, 0, 0.15);
 
-  animation:
-    fadeUp 1.2s ease 0.45s both;
+  animation: fadeUp 1.2s ease 0.45s both;
 }
 
 .text-card p + p {
@@ -1001,7 +851,6 @@ select {
 
 .location-section {
   position: relative;
-
   z-index: 2;
 
   width: 100%;
@@ -1013,16 +862,13 @@ select {
 
   text-align: center;
 
-  animation:
-    sectionAppear 1.3s ease;
+  animation: sectionAppear 1.3s ease;
 }
 
 .location-title {
   margin: 0;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: clamp(48px, 13vw, 80px);
 
@@ -1036,8 +882,7 @@ select {
     0 3px 0 #936b27,
     0 6px 15px rgba(0, 0, 0, 0.4);
 
-  animation:
-    titleAppear 1s ease 0.15s both;
+  animation: titleAppear 1s ease 0.15s both;
 }
 
 /* =========================================================
@@ -1083,7 +928,6 @@ select {
 
 .location-divider span {
   margin: 0 10px;
-
   font-size: 9px;
 }
 
@@ -1099,19 +943,20 @@ select {
 
   overflow: hidden;
 
-  border:
-    1px solid #d9a928;
+  border: 1px solid #d9a928;
 
   border-radius:
-    40px 40px 0 0;
+    40px
+    40px
+    0
+    0;
 
   background: #10060d;
 
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.35);
 
-  animation:
-    mapAppear 1.2s ease 0.3s both;
+  animation: mapAppear 1.2s ease 0.3s both;
 }
 
 .map-container iframe {
@@ -1156,7 +1001,10 @@ select {
   padding: 35px 20px 30px;
 
   border-radius:
-    0 0 40px 40px;
+    0
+    0
+    40px
+    40px;
 
   background:
     linear-gradient(
@@ -1165,24 +1013,20 @@ select {
       #15070f
     );
 
-  border:
-    1px solid rgba(201, 158, 65, 0.22);
+  border: 1px solid rgba(201, 158, 65, 0.22);
 
   border-top: none;
 
   box-shadow:
     0 18px 40px rgba(0, 0, 0, 0.25);
 
-  animation:
-    cardAppear 1s ease 0.45s both;
+  animation: cardAppear 1s ease 0.45s both;
 }
 
 .location-card h3 {
   margin: 0 0 28px;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   color: #f3e7c8;
 
@@ -1200,9 +1044,7 @@ select {
 
   color: #bcae8e;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: 17px;
 
@@ -1220,6 +1062,7 @@ select {
   height: 80px;
 
   border: none;
+
   border-radius: 45px;
 
   background:
@@ -1231,9 +1074,7 @@ select {
 
   color: #21100e;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: 20px;
 
@@ -1263,9 +1104,7 @@ select {
 
   color: #a98a43;
 
-  font-family:
-    "Noto Serif Devanagari",
-    serif;
+  font-family: "Noto Serif Devanagari", serif;
 
   font-size: 14px;
 
@@ -1278,7 +1117,6 @@ select {
 
 .footer {
   position: relative;
-
   z-index: 2;
 
   width: 100%;
@@ -1290,23 +1128,20 @@ select {
 
   text-align: center;
 
-  animation:
-    sectionAppear 1.2s ease;
+  animation: sectionAppear 1.2s ease;
 }
 
 .footer-main {
-  font-family:
-    "Tiro Devanagari Marathi";
+  font-family: "Tiro Devanagari Marathi";
+
   color: #d4aa52;
 
   font-size: 30px;
-
   font-weight: 600;
 
   line-height: 1.6;
 
-  animation:
-    fadeUp 1s ease 0.2s both;
+  animation: fadeUp 1s ease 0.2s both;
 }
 
 /* =========================================================
@@ -1427,6 +1262,7 @@ select {
 @keyframes titleAppear {
   from {
     opacity: 0;
+
     transform:
       translateY(25px)
       scale(0.94);
@@ -1434,6 +1270,7 @@ select {
 
   to {
     opacity: 1;
+
     transform:
       translateY(0)
       scale(1);
@@ -1443,6 +1280,7 @@ select {
 @keyframes bappaAppear {
   from {
     opacity: 0;
+
     transform:
       scale(0.92)
       translateY(30px);
@@ -1450,6 +1288,7 @@ select {
 
   to {
     opacity: 1;
+
     transform:
       scale(1)
       translateY(0);
@@ -1522,6 +1361,7 @@ select {
 @keyframes mapAppear {
   from {
     opacity: 0;
+
     transform:
       translateY(25px)
       scale(0.98);
@@ -1529,6 +1369,7 @@ select {
 
   to {
     opacity: 1;
+
     transform:
       translateY(0)
       scale(1);
@@ -1537,14 +1378,13 @@ select {
 
 /* =========================================================
    TABLET
+   ONLY RESPONSIVE CHANGES
 ========================================================= */
 
 @media (max-width: 768px) {
+
   .top-header {
-    padding:
-      24px
-      20px
-      8px;
+    padding: 24px 20px 8px;
   }
 
   .hero {
@@ -1555,58 +1395,65 @@ select {
     font-size: 82px;
   }
 
+  /* Tablet arch */
   .arch-border {
-    width: 370px;
-    height: 550px;
+    width: 330px;
+    height: 480px;
+    border-width: 2px;
 
     border-radius:
-      190px
-      190px
-      22px
-      22px;
+      165px
+      165px
+      20px
+      20px;
   }
 
   .arch-border::before {
+    inset: 5px;
+
     border-radius:
-      182px
-      182px
-      16px
-      16px;
+      160px
+      160px
+      15px
+      15px;
+  }
+
+  /* Bappa stays at bottom of arch */
+  .ganpati-image {
+    width: 82%;
+    height: 82%;
+
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+    object-position: center bottom;
   }
 }
 
+
 /* =========================================================
    MOBILE
+   ONLY RESPONSIVE CHANGES
 ========================================================= */
 
 @media (max-width: 600px) {
-  /* Music */
 
-  .music-button {
-    top: 14px;
-    right: 14px;
-
-    width: 48px;
-    height: 48px;
-
-    font-size: 20px;
-  }
 
   /* Header */
 
   .top-header {
-    padding:
-      20px
-      16px
-      5px;
-
+    padding: 20px 16px 5px;
     gap: 8px;
   }
 
   .ganesh-symbol {
     width: 44px;
     height: 44px;
-
     font-size: 28px;
   }
 
@@ -1615,13 +1462,11 @@ select {
     line-height: 1.6;
   }
 
+
   /* Hero */
 
   .hero {
-    padding:
-      38px
-      14px
-      20px;
+    padding: 38px 14px 20px;
   }
 
   .welcome-text {
@@ -1631,9 +1476,7 @@ select {
 
   .main-title {
     font-size: 70px;
-
     letter-spacing: -3px;
-
     line-height: 0.98;
   }
 
@@ -1641,41 +1484,61 @@ select {
     margin-bottom: 12px;
   }
 
-  /* Ganpati */
+
+  /* =====================================================
+     GANPATI MOBILE
+  ===================================================== */
 
   .ganpati-container {
-    margin-top: 38px;
+    margin-top: 28px;
+    padding: 0;
   }
 
+  /* Phone arch */
+  @media (max-width: 600px) {
+
   .arch-border {
-    width: 330px;
-    max-width: 86vw;
+    width: 220px;
+    height: 280px;
 
-    height: 510px;
-
-    border-radius:
-      170px
-      170px
-      20px
-      20px;
+    border-width: 2px;
+    border-radius: 120px 120px 16px 16px;
   }
 
   .arch-border::before {
-    inset: 6px;
-
-    border-radius:
-      164px
-      164px
-      15px
-      15px;
+    inset: 5px;
+    border-radius: 115px 115px 12px 12px;
   }
+
+}
+
+  /* 
+     IMPORTANT:
+     Bappa is anchored to the bottom.
+     This removes the large empty space below Bappa.
+  */
+
+  .ganpati-image {
+    width: 85%;
+    height: 85%;
+
+    top: auto;
+    bottom: 0;
+
+    left: 0;
+    right: 0;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
 
   /* Opening */
 
   .opening-content {
-    padding:
-      20px
-      15px;
+    padding: 20px 15px;
   }
 
   .opening-om {
@@ -1699,13 +1562,11 @@ select {
     margin: 20px auto;
   }
 
+
   /* Invitation */
 
   .invitation-intro {
-    padding:
-      30px
-      15px
-      50px;
+    padding: 30px 15px 50px;
   }
 
   .invitation-intro h2 {
@@ -1731,20 +1592,14 @@ select {
 
   .gold-divider {
     width: 180px;
-
-    margin:
-      28px
-      auto
-      50px;
+    margin: 28px auto 50px;
   }
+
 
   /* Festival */
 
   .festival-section {
-    padding:
-      65px
-      15px
-      45px;
+    padding: 65px 15px 45px;
   }
 
   .festival-title {
@@ -1753,40 +1608,25 @@ select {
 
   .info-card {
     min-height: 175px;
-
-    padding:
-      32px
-      15px;
-
+    padding: 32px 15px;
     border-radius: 30px;
   }
 
   .card-label {
     font-size: 16px;
-
     margin-bottom: 15px;
   }
 
   .info-card h3 {
     font-size: 29px;
-
     line-height: 1.45;
   }
 
   .text-card {
-    padding:
-      32px
-      20px;
-
-    margin:
-      42px
-      auto
-      32px;
-
+    padding: 32px 20px;
+    margin: 42px auto 32px;
     font-size: 14px;
-
     line-height: 2;
-
     border-radius: 26px;
   }
 
@@ -1794,13 +1634,11 @@ select {
     margin-top: 28px;
   }
 
+
   /* Location */
 
   .location-section {
-    padding:
-      60px
-      15px
-      50px;
+    padding: 60px 15px 50px;
   }
 
   .location-title {
@@ -1809,11 +1647,7 @@ select {
 
   .location-divider {
     width: 180px;
-
-    margin:
-      28px
-      auto
-      50px;
+    margin: 28px auto 50px;
   }
 
   .map-container {
@@ -1827,10 +1661,7 @@ select {
   }
 
   .location-card {
-    padding:
-      28px
-      17px
-      25px;
+    padding: 28px 17px 25px;
 
     border-radius:
       0
@@ -1841,24 +1672,19 @@ select {
 
   .location-card h3 {
     font-size: 35px;
-
     margin-bottom: 24px;
   }
 
   .address {
     font-size: 15px;
-
     line-height: 2;
-
     margin-bottom: 30px;
   }
 
   .maps-button {
     width: 250px;
     max-width: 90%;
-
     height: 68px;
-
     font-size: 18px;
   }
 
@@ -1866,13 +1692,11 @@ select {
     font-size: 13px;
   }
 
+
   /* Footer */
 
   .footer {
-    padding:
-      25px
-      18px
-      55px;
+    padding: 25px 18px 55px;
   }
 
   .footer-main {
@@ -1880,32 +1704,20 @@ select {
   }
 }
 
+
 /* =========================================================
    SMALL MOBILE
+   ONLY RESPONSIVE CHANGES
 ========================================================= */
 
 @media (max-width: 380px) {
-  .music-button {
-    width: 44px;
-    height: 44px;
-
-    top: 12px;
-    right: 12px;
-
-    font-size: 19px;
-  }
-
   .top-header {
-    padding:
-      18px
-      12px
-      5px;
+    padding: 18px 12px 5px;
   }
 
   .ganesh-symbol {
     width: 40px;
     height: 40px;
-
     font-size: 26px;
   }
 
@@ -1913,11 +1725,9 @@ select {
     font-size: 11px;
   }
 
+
   .hero {
-    padding:
-      34px
-      10px
-      15px;
+    padding: 34px 10px 15px;
   }
 
   .welcome-text {
@@ -1926,34 +1736,63 @@ select {
 
   .main-title {
     font-size: 62px;
-
     letter-spacing: -2px;
   }
 
+
+  /* =====================================================
+     SMALL PHONE GANPATI
+  ===================================================== */
+
   .ganpati-container {
-    margin-top: 32px;
+    margin-top: 25px;
   }
 
   .arch-border {
-    width: 290px;
-    height: 455px;
+    width: 250px;
+    height: 370px;
 
-    max-width: 86vw;
+    max-width: 82vw;
+
+    border-width: 2px;
 
     border-radius:
-      150px
-      150px
-      18px
-      18px;
+      125px
+      125px
+      16px
+      16px;
   }
 
   .arch-border::before {
+    inset: 4px;
+
     border-radius:
-      144px
-      144px
-      14px
-      14px;
+      120px
+      120px
+      12px
+      12px;
   }
+
+  /* Bappa anchored at bottom */
+
+  .ganpati-image {
+    width: 82%;
+    height: 82%;
+
+    top: auto;
+    bottom: 0;
+
+    left: 0;
+    right: 0;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
+
+  /* Opening */
 
   .opening-om {
     font-size: 50px;
@@ -1966,15 +1805,14 @@ select {
   .opening-circle {
     width: 130px;
     height: 130px;
-
     font-size: 14px;
   }
 
+
+  /* Festival */
+
   .festival-section {
-    padding:
-      55px
-      12px
-      40px;
+    padding: 55px 12px 40px;
   }
 
   .festival-title {
@@ -1987,17 +1825,14 @@ select {
 
   .text-card {
     font-size: 13px;
-
-    padding:
-      28px
-      16px;
+    padding: 28px 16px;
   }
 
+
+  /* Location */
+
   .location-section {
-    padding:
-      50px
-      12px
-      45px;
+    padding: 50px 12px 45px;
   }
 
   .location-title {
@@ -2033,7 +1868,6 @@ select {
   .maps-button {
     width: 230px;
     height: 64px;
-
     font-size: 17px;
   }
 
@@ -2042,33 +1876,65 @@ select {
   }
 }
 
+
 /* =========================================================
    EXTRA SMALL DEVICES
+   ONLY RESPONSIVE CHANGES
 ========================================================= */
 
 @media (max-width: 330px) {
+
   .main-title {
     font-size: 55px;
   }
 
+
+  /* Very small phone arch */
+
   .arch-border {
-    width: 265px;
-    height: 415px;
+    width: 225px;
+    height: 345px;
+
+    max-width: 82vw;
+
+    border-width: 2px;
 
     border-radius:
-      135px
-      135px
-      16px
-      16px;
+      112px
+      112px
+      15px
+      15px;
   }
 
   .arch-border::before {
+    inset: 4px;
+
     border-radius:
-      130px
-      130px
-      12px
-      12px;
+      108px
+      108px
+      11px
+      11px;
   }
+
+
+  /* Bappa anchored at bottom */
+
+  .ganpati-image {
+    width: 82%;
+    height: 82%;
+
+    top: auto;
+    bottom: 0;
+
+    left: 0;
+    right: 0;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
 
   .festival-title {
     font-size: 40px;
@@ -2081,7 +1947,6 @@ select {
   .opening-circle {
     width: 120px;
     height: 120px;
-
     font-size: 13px;
   }
 
@@ -2090,11 +1955,13 @@ select {
   }
 }
 
+
 /* =========================================================
    REDUCE MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

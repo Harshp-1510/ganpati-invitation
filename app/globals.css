@@ -1637,8 +1637,16 @@ select {
 
   /* Location */
 
+  /* =========================================================
+   LOCATION — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
   .location-section {
+    width: 100%;
     padding: 60px 15px 50px;
+    text-align: center;
   }
 
   .location-title {
@@ -1650,24 +1658,40 @@ select {
     margin: 28px auto 50px;
   }
 
+  /* MAP CONTAINER */
   .map-container {
-    height: 320px;
+    width: 90%;
+    height: 220px;
+    margin: 0 auto;
+    overflow: hidden;
 
-    border-radius:
-      32px
-      32px
-      0
-      0;
+    border: 1px solid #d9a928;
+    border-radius: 28px 28px 0 0;
+
+    background: #10060d;
+
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.35);
   }
 
+  .map-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  /* LOCATION CARD — SAME WIDTH AS MAP */
   .location-card {
+    width: 90%;
+    margin: -1px auto 0;
     padding: 28px 17px 25px;
 
     border-radius:
       0
       0
-      32px
-      32px;
+      28px
+      28px;
   }
 
   .location-card h3 {
@@ -1691,7 +1715,7 @@ select {
   .location-footer {
     font-size: 13px;
   }
-
+}
 
   /* Footer */
 

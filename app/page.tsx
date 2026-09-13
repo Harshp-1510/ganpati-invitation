@@ -1,12 +1,122 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const [opened, setOpened] = useState(false);
   const [closing, setClosing] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  // Scroll progress
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const scrollbarRef = useRef<HTMLDivElement | null>(null);
+  const dragStartY = useRef(0);
+  const dragStartScroll = useRef(0);
+
+ // Update scrollbar when page scrolls
+
+useEffect(() => {
+
+  const handleScroll = () => {
+
+    const scrollTop = window.scrollY;
+
+    const pageHeight =
+      document.documentElement.scrollHeight
+      - window.innerHeight;
+
+    if (pageHeight <= 0) {
+      setScrollProgress(0);
+      return;
+    }
+
+    const progress =
+      (scrollTop / pageHeight) * 100;
+
+    setScrollProgress(progress);
+
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  handleScroll();
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+
+}, []);
+
+  // Start dragging
+
+const handlePointerDown = (
+  e: React.PointerEvent<HTMLDivElement>
+) => {
+
+  e.preventDefault();
+
+  setIsDragging(true);
+
+  dragStartY.current = e.clientY;
+
+  dragStartScroll.current = window.scrollY;
+
+  e.currentTarget.setPointerCapture(e.pointerId);
+
+};
+
+
+// Move scrollbar
+
+const handlePointerMove = (
+  e: React.PointerEvent<HTMLDivElement>
+) => {
+
+  if (!isDragging) return;
+
+  const trackHeight = 120;
+
+  const thumbHeight = 35;
+
+  const maxThumbMove =
+    trackHeight - thumbHeight;
+
+  const maxScroll =
+    document.documentElement.scrollHeight
+    - window.innerHeight;
+
+  const deltaY =
+    e.clientY - dragStartY.current;
+
+  const scrollAmount =
+    (deltaY / maxThumbMove) * maxScroll;
+
+  window.scrollTo({
+
+    top: dragStartScroll.current + scrollAmount,
+
+    behavior: "auto"
+
+  });
+
+};
+
+
+// Stop dragging
+
+const handlePointerUp = (
+  e: React.PointerEvent<HTMLDivElement>
+) => {
+
+  setIsDragging(false);
+
+  e.currentTarget.releasePointerCapture(e.pointerId);
+
+};
+
+  // Your existing handleOpen...
 
   const handleOpen = async () => {
     // Start music when user taps Tap to Open
@@ -83,7 +193,15 @@ export default function Home() {
               aria-label="आमंत्रण उघडा"
             >
               <div className="opening-circle">
-                ॥ श्री गणेशाय नमः ॥
+
+                <div className="mantra-text">
+                  ॥ श्री गणेशाय नमः ॥
+                </div>
+
+                <div className="tap-text">
+                  आमंत्रण उघडा
+                </div>
+
               </div>
             </button>
 
@@ -91,6 +209,7 @@ export default function Home() {
               <span>◆</span>
             </div>
 
+          
           </div>
         </section>
       )}
@@ -103,6 +222,29 @@ export default function Home() {
       {opened && (
         <div className="main-content">
 
+          {/* CUSTOM MOBILE SCROLLBAR */}
+
+<div className="custom-scrollbar">
+
+  <div className="scroll-track">
+
+    <div
+      ref={scrollbarRef}
+      className={`scroll-thumb ${
+        isDragging ? "dragging" : ""
+      }`}
+      style={{
+        top: `${scrollProgress}%`,
+      }}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={handlePointerUp}
+    ></div>
+
+  </div>
+
+</div>
 
           {/* =================================================
               HEADER

@@ -17,7 +17,9 @@ html {
 body {
   margin: 0;
   padding: 0;
+
   font-family: "Noto Serif Devanagari", serif;
+
   background: #160711;
   color: #f3e7c7;
 }
@@ -29,14 +31,17 @@ select {
   font-family: inherit;
 }
 
+
 /* =========================================================
    MAIN PAGE
 ========================================================= */
 
 .ganpati-page {
   position: relative;
+
   width: 100%;
   min-height: 100vh;
+
   overflow-x: hidden;
 
   background:
@@ -58,16 +63,20 @@ select {
     );
 }
 
+
 /* =========================================================
    BACKGROUND PATTERN
 ========================================================= */
 
 .ganpati-page::before {
   content: "";
+
   position: fixed;
   inset: 0;
+
   z-index: 0;
   pointer-events: none;
+
   opacity: 0.13;
 
   background-image:
@@ -81,6 +90,7 @@ select {
   background-size: 75px 75px;
 }
 
+
 /* =========================================================
    OPENING SCREEN
 ========================================================= */
@@ -88,6 +98,7 @@ select {
 .opening-screen {
   position: fixed;
   inset: 0;
+
   z-index: 9999;
 
   display: flex;
@@ -95,6 +106,8 @@ select {
   justify-content: center;
 
   min-height: 100vh;
+
+  overflow: hidden;
 
   background:
     radial-gradient(
@@ -104,13 +117,12 @@ select {
     ),
     #170810;
 
-  overflow: hidden;
-
   animation: openingAppear 1s ease forwards;
 }
 
 .opening-screen::before {
   content: "";
+
   position: absolute;
   inset: 0;
 
@@ -128,12 +140,14 @@ select {
   animation: backgroundMove 15s linear infinite;
 }
 
+
 /* =========================================================
    OPENING CONTENT
 ========================================================= */
 
 .opening-content {
   position: relative;
+
   z-index: 2;
 
   width: 100%;
@@ -143,6 +157,7 @@ select {
 
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
@@ -150,6 +165,7 @@ select {
 
   animation: openingContent 1.2s ease;
 }
+
 
 /* =========================================================
    OPENING OM
@@ -170,6 +186,7 @@ select {
 
   animation: softGlow 2.5s infinite alternate;
 }
+
 
 /* =========================================================
    OPENING DIVIDER
@@ -214,62 +231,82 @@ select {
 
 .opening-divider b {
   color: #d6a72c;
+
   font-size: 8px;
   font-weight: 400;
 }
+
 
 /* =========================================================
    TAP BUTTON
 ========================================================= */
 
 .tap-button {
-  margin: 30px auto;
-  padding: 0;
+  width: 180px;
+  height: 180px;
 
-  border: none;
+  border-radius: 50%;
+
   background: transparent;
+
+  border: 1px solid #d5a83f;
+
+  color: #e0bd68;
+
+  font-family: "Noto Serif Devanagari", serif;
+
+  font-size: 15px;
+  letter-spacing: 1px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  color: #e0bd68;
-
   cursor: pointer;
 
-  font-family: "Noto Serif Devanagari", serif;
-
-  animation: buttonFloat 2.5s infinite;
-}
-
-.tap-button:hover .opening-circle {
-  transform: scale(1.06);
+  -webkit-tap-highlight-color: transparent;
 
   box-shadow:
-    0 0 35px rgba(213, 168, 63, 0.45),
-    inset 0 0 25px rgba(213, 168, 63, 0.18);
+    0 0 15px rgba(213, 168, 63, 0.15),
+    inset 0 0 20px rgba(213, 168, 63, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.tap-button:active .opening-circle {
-  transform: scale(0.94);
+.tap-button:hover {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 25px rgba(213, 168, 63, 0.35),
+    inset 0 0 20px rgba(213, 168, 63, 0.08);
 }
+
+.tap-button:active {
+  transform: scale(0.97);
+}
+
 
 /* =========================================================
    OPENING CIRCLE
 ========================================================= */
 
 .opening-circle {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
 
   border: 1px solid #d5a83f;
+
   border-radius: 50%;
 
   display: flex;
+  flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
-  padding: 12px;
+  padding: 10px;
 
   text-align: center;
 
@@ -279,6 +316,7 @@ select {
 
   font-size: 17px;
   font-weight: 500;
+
   line-height: 1.6;
 
   box-shadow:
@@ -292,6 +330,41 @@ select {
     box-shadow 0.3s ease;
 }
 
+
+/* =========================================================
+   MANTRA TEXT
+========================================================= */
+
+.mantra-text {
+  color: #e0bd68;
+
+  font-family: "Noto Serif Devanagari", serif;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   TAP TEXT
+========================================================= */
+
+.tap-text {
+  margin-top: 4px;
+
+  color: #c9a34e;
+
+  font-family: "Noto Serif Devanagari", serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  letter-spacing: 0px;
+}
+
+
 /* =========================================================
    OPENING EXIT
 ========================================================= */
@@ -300,18 +373,21 @@ select {
   animation: openingDisappear 0.7s ease forwards;
 }
 
+
 /* =========================================================
    HEADER
 ========================================================= */
 
 .top-header {
   position: relative;
+
   z-index: 3;
 
   width: 100%;
 
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
@@ -323,6 +399,7 @@ select {
 
   font-family: "Noto Serif Devanagari", serif;
 }
+
 
 /* =========================================================
    GANESH SYMBOL
@@ -341,8 +418,10 @@ select {
   font-family: "Noto Serif Devanagari", serif;
 
   font-size: 42px;
+
   line-height: 1.6;
 }
+
 
 /* =========================================================
    GANESH MANTRA
@@ -357,6 +436,7 @@ select {
 
   font-size: 16px;
   font-weight: 500;
+
   line-height: 1.7;
 
   text-align: center;
@@ -364,12 +444,14 @@ select {
   white-space: nowrap;
 }
 
+
 /* =========================================================
    HERO
 ========================================================= */
 
 .hero {
   position: relative;
+
   z-index: 2;
 
   width: 100%;
@@ -383,6 +465,7 @@ select {
 
   animation: heroAppear 1.2s ease;
 }
+
 
 /* =========================================================
    WELCOME TEXT
@@ -403,6 +486,7 @@ select {
   animation: fadeUp 1s ease 0.2s both;
 }
 
+
 /* =========================================================
    MAIN TITLE
 ========================================================= */
@@ -410,6 +494,7 @@ select {
 .main-title {
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
@@ -438,6 +523,7 @@ select {
   margin-bottom: 15px;
 }
 
+
 /* =========================================================
    GANPATI CONTAINER
 ========================================================= */
@@ -454,9 +540,9 @@ select {
   animation: fadeUp 1.3s ease 0.4s both;
 }
 
+
 /* =========================================================
    GANPATI ARCH
-   DESKTOP — UNCHANGED
 ========================================================= */
 
 .arch-border {
@@ -494,11 +580,16 @@ select {
     border-width 0.4s ease;
 }
 
-/* Inner arch */
+
+/* =========================================================
+   INNER ARCH
+========================================================= */
+
 .arch-border::before {
   content: "";
 
   position: absolute;
+
   inset: 7px;
 
   z-index: 4;
@@ -514,9 +605,9 @@ select {
   pointer-events: none;
 }
 
+
 /* =========================================================
    GANPATI IMAGE
-   DESKTOP — UNCHANGED
 ========================================================= */
 
 .ganpati-image {
@@ -529,6 +620,7 @@ select {
   height: 100%;
 
   object-fit: contain;
+
   object-position: center bottom;
 
   transform: scale(1.02);
@@ -543,12 +635,14 @@ select {
     ganpatiFloat 5s ease-in-out 2s infinite;
 }
 
+
 /* =========================================================
    INVITATION INTRO
 ========================================================= */
 
 .invitation-intro {
   position: relative;
+
   z-index: 2;
 
   text-align: center;
@@ -567,6 +661,7 @@ select {
 
   font-size: 30px;
   font-weight: 600;
+
   line-height: 1.5;
 
   animation: fadeUp 1s ease 0.2s both;
@@ -580,10 +675,12 @@ select {
   font-family: "Noto Serif Devanagari", serif;
 
   font-size: 20px;
+
   line-height: 1.6;
 
   animation: fadeUp 1s ease 0.3s both;
 }
+
 
 /* =========================================================
    MAIN INVITATION
@@ -628,6 +725,7 @@ select {
 
   animation: fadeUp 1s ease 0.4s both;
 }
+
 
 /* =========================================================
    GOLD DIVIDER
@@ -681,12 +779,14 @@ select {
     diamondGlow 2.5s ease-in-out infinite alternate;
 }
 
+
 /* =========================================================
    FESTIVAL SECTION
 ========================================================= */
 
 .festival-section {
   position: relative;
+
   z-index: 2;
 
   width: 100%;
@@ -720,6 +820,7 @@ select {
 
   animation: titleAppear 1s ease 0.15s both;
 }
+
 
 /* =========================================================
    INFORMATION CARD
@@ -804,12 +905,14 @@ select {
     0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
+
 /* =========================================================
    TEXT CARD
 ========================================================= */
 
 .text-card {
   position: relative;
+
   z-index: 2;
 
   width: 100%;
@@ -845,12 +948,14 @@ select {
   margin-top: 34px;
 }
 
+
 /* =========================================================
    LOCATION SECTION
 ========================================================= */
 
 .location-section {
   position: relative;
+
   z-index: 2;
 
   width: 100%;
@@ -884,6 +989,7 @@ select {
 
   animation: titleAppear 1s ease 0.15s both;
 }
+
 
 /* =========================================================
    LOCATION DIVIDER
@@ -928,8 +1034,10 @@ select {
 
 .location-divider span {
   margin: 0 10px;
+
   font-size: 9px;
 }
+
 
 /* =========================================================
    MAP
@@ -988,6 +1096,7 @@ select {
       rgba(25, 7, 17, 0.95)
     );
 }
+
 
 /* =========================================================
    LOCATION CARD
@@ -1051,6 +1160,7 @@ select {
   line-height: 2.1;
 }
 
+
 /* =========================================================
    MAP BUTTON
 ========================================================= */
@@ -1111,12 +1221,14 @@ select {
   line-height: 1.8;
 }
 
+
 /* =========================================================
    FOOTER
 ========================================================= */
 
 .footer {
   position: relative;
+
   z-index: 2;
 
   width: 100%;
@@ -1132,7 +1244,7 @@ select {
 }
 
 .footer-main {
-  font-family: "Tiro Devanagari Marathi";
+  font-family: "Tiro Devanagari Marathi", serif;
 
   color: #d4aa52;
 
@@ -1143,6 +1255,7 @@ select {
 
   animation: fadeUp 1s ease 0.2s both;
 }
+
 
 /* =========================================================
    ANIMATIONS
@@ -1158,6 +1271,7 @@ select {
   }
 }
 
+
 @keyframes openingContent {
   from {
     opacity: 0;
@@ -1169,6 +1283,7 @@ select {
     transform: translateY(0);
   }
 }
+
 
 @keyframes openingDisappear {
   from {
@@ -1182,6 +1297,7 @@ select {
   }
 }
 
+
 @keyframes backgroundMove {
   from {
     background-position: 0 0;
@@ -1191,6 +1307,7 @@ select {
     background-position: 70px 70px;
   }
 }
+
 
 @keyframes softGlow {
   from {
@@ -1203,6 +1320,7 @@ select {
       0 0 25px rgba(215, 170, 67, 0.55);
   }
 }
+
 
 @keyframes circlePulse {
   0% {
@@ -1224,16 +1342,6 @@ select {
   }
 }
 
-@keyframes buttonFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-5px);
-  }
-}
 
 @keyframes heroAppear {
   from {
@@ -1247,6 +1355,7 @@ select {
   }
 }
 
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -1258,6 +1367,7 @@ select {
     transform: translateY(0);
   }
 }
+
 
 @keyframes titleAppear {
   from {
@@ -1277,6 +1387,7 @@ select {
   }
 }
 
+
 @keyframes bappaAppear {
   from {
     opacity: 0;
@@ -1295,6 +1406,7 @@ select {
   }
 }
 
+
 @keyframes ganpatiFloat {
   0%,
   100% {
@@ -1310,6 +1422,7 @@ select {
   }
 }
 
+
 @keyframes sectionAppear {
   from {
     opacity: 0;
@@ -1321,6 +1434,7 @@ select {
     transform: translateY(0);
   }
 }
+
 
 @keyframes dividerAppear {
   from {
@@ -1334,6 +1448,7 @@ select {
   }
 }
 
+
 @keyframes diamondGlow {
   from {
     opacity: 0.5;
@@ -1346,6 +1461,7 @@ select {
   }
 }
 
+
 @keyframes cardAppear {
   from {
     opacity: 0;
@@ -1357,6 +1473,7 @@ select {
     transform: translateY(0);
   }
 }
+
 
 @keyframes mapAppear {
   from {
@@ -1376,9 +1493,10 @@ select {
   }
 }
 
+
 /* =========================================================
    TABLET
-   ONLY RESPONSIVE CHANGES
+   601px - 768px
 ========================================================= */
 
 @media (max-width: 768px) {
@@ -1395,10 +1513,12 @@ select {
     font-size: 82px;
   }
 
-  /* Tablet arch */
+  /* Tablet Arch */
+
   .arch-border {
     width: 330px;
     height: 480px;
+
     border-width: 2px;
 
     border-radius:
@@ -1418,13 +1538,15 @@ select {
       15px;
   }
 
-  /* Bappa stays at bottom of arch */
+  /* Bappa stays at bottom */
+
   .ganpati-image {
     width: 82%;
     height: 82%;
 
     top: auto;
     bottom: 0;
+
     left: 0;
     right: 0;
 
@@ -1438,32 +1560,38 @@ select {
 
 /* =========================================================
    MOBILE
-   ONLY RESPONSIVE CHANGES
+   601px and below
 ========================================================= */
 
 @media (max-width: 600px) {
 
-
-  /* Header */
+  /* =======================================================
+     HEADER
+  ======================================================= */
 
   .top-header {
     padding: 20px 16px 5px;
+
     gap: 8px;
   }
 
   .ganesh-symbol {
     width: 44px;
     height: 44px;
+
     font-size: 28px;
   }
 
   .ganesh-mantra {
     font-size: 13px;
+
     line-height: 1.6;
   }
 
 
-  /* Hero */
+  /* =======================================================
+     HERO
+  ======================================================= */
 
   .hero {
     padding: 38px 14px 20px;
@@ -1471,12 +1599,15 @@ select {
 
   .welcome-text {
     font-size: 16px;
+
     margin-bottom: 12px;
   }
 
   .main-title {
     font-size: 70px;
+
     letter-spacing: -3px;
+
     line-height: 0.98;
   }
 
@@ -1485,38 +1616,38 @@ select {
   }
 
 
-  /* =====================================================
-     GANPATI MOBILE
-  ===================================================== */
+  /* =======================================================
+     GANPATI
+  ======================================================= */
 
   .ganpati-container {
     margin-top: 28px;
+
     padding: 0;
   }
-
-  /* Phone arch */
-  @media (max-width: 600px) {
 
   .arch-border {
     width: 220px;
     height: 280px;
 
     border-width: 2px;
-    border-radius: 120px 120px 16px 16px;
+
+    border-radius:
+      120px
+      120px
+      16px
+      16px;
   }
 
   .arch-border::before {
     inset: 5px;
-    border-radius: 115px 115px 12px 12px;
+
+    border-radius:
+      115px
+      115px
+      12px
+      12px;
   }
-
-}
-
-  /* 
-     IMPORTANT:
-     Bappa is anchored to the bottom.
-     This removes the large empty space below Bappa.
-  */
 
   .ganpati-image {
     width: 85%;
@@ -1535,7 +1666,9 @@ select {
   }
 
 
-  /* Opening */
+  /* =======================================================
+     OPENING SCREEN
+  ======================================================= */
 
   .opening-content {
     padding: 20px 15px;
@@ -1549,21 +1682,36 @@ select {
     width: 180px;
   }
 
-  .opening-circle {
-    width: 140px;
-    height: 140px;
-
-    font-size: 15px;
-
-    margin: 25px auto;
-  }
-
   .tap-button {
+    width: 160px;
+    height: 160px;
+
     margin: 20px auto;
   }
 
+  .opening-circle {
+    width: 160px;
+    height: 160px;
 
-  /* Invitation */
+    font-size: 15px;
+
+    margin: 0 auto;
+  }
+
+  .mantra-text {
+    font-size: 15px;
+    margin-top: 5px;
+
+  }
+
+  .tap-text {
+    font-size: 13.5px;
+  }
+
+
+  /* =======================================================
+     INVITATION
+  ======================================================= */
 
   .invitation-intro {
     padding: 30px 15px 50px;
@@ -1587,16 +1735,20 @@ select {
 
   .main-invitation p {
     font-size: 16px;
+
     line-height: 1.8;
   }
 
   .gold-divider {
     width: 180px;
+
     margin: 28px auto 50px;
   }
 
 
-  /* Festival */
+  /* =======================================================
+     FESTIVAL
+  ======================================================= */
 
   .festival-section {
     padding: 65px 15px 45px;
@@ -1608,25 +1760,33 @@ select {
 
   .info-card {
     min-height: 175px;
+
     padding: 32px 15px;
+
     border-radius: 30px;
   }
 
   .card-label {
     font-size: 16px;
+
     margin-bottom: 15px;
   }
 
   .info-card h3 {
     font-size: 29px;
+
     line-height: 1.45;
   }
 
   .text-card {
     padding: 32px 20px;
+
     margin: 42px auto 32px;
+
     font-size: 14px;
+
     line-height: 2;
+
     border-radius: 26px;
   }
 
@@ -1635,13 +1795,9 @@ select {
   }
 
 
-  /* Location */
-
-  /* =========================================================
-   LOCATION — MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
+  /* =======================================================
+     LOCATION
+  ======================================================= */
 
   .location-section {
     width: 100%;
@@ -1655,12 +1811,12 @@ select {
 
   .location-divider {
     width: 180px;
+
     margin: 28px auto 50px;
   }
 
-  /* MAP CONTAINER */
   .map-container {
-    width: 90%;
+     width: 90%;
     height: 220px;
     margin: 0 auto;
     overflow: hidden;
@@ -1673,15 +1829,13 @@ select {
     box-shadow:
       0 10px 30px rgba(0, 0, 0, 0.35);
   }
-
   .map-container iframe {
     display: block;
     width: 100%;
     height: 100%;
     border: 0;
   }
-
-  /* LOCATION CARD — SAME WIDTH AS MAP */
+  
   .location-card {
     width: 90%;
     margin: -1px auto 0;
@@ -1696,28 +1850,35 @@ select {
 
   .location-card h3 {
     font-size: 35px;
+
     margin-bottom: 24px;
   }
 
   .address {
     font-size: 15px;
+
     line-height: 2;
+
     margin-bottom: 30px;
   }
 
   .maps-button {
     width: 250px;
     max-width: 90%;
+
     height: 68px;
+
     font-size: 18px;
   }
 
   .location-footer {
     font-size: 13px;
   }
-}
 
-  /* Footer */
+
+  /* =======================================================
+     FOOTER
+  ======================================================= */
 
   .footer {
     padding: 25px 18px 55px;
@@ -1731,10 +1892,50 @@ select {
 
 /* =========================================================
    SMALL MOBILE
-   ONLY RESPONSIVE CHANGES
+   381px - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .main-title {
+    font-size: 66px;
+  }
+
+  .arch-border {
+    width: 240px;
+    height: 330px;
+
+    border-radius:
+      120px
+      120px
+      16px
+      16px;
+  }
+
+  .arch-border::before {
+    inset: 4px;
+
+    border-radius:
+      116px
+      116px
+      12px
+      12px;
+  }
+
+  .ganpati-image {
+    width: 84%;
+    height: 84%;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   380px and below
 ========================================================= */
 
 @media (max-width: 380px) {
+
   .top-header {
     padding: 18px 12px 5px;
   }
@@ -1742,6 +1943,7 @@ select {
   .ganesh-symbol {
     width: 40px;
     height: 40px;
+
     font-size: 26px;
   }
 
@@ -1749,6 +1951,8 @@ select {
     font-size: 11px;
   }
 
+
+  /* Hero */
 
   .hero {
     padding: 34px 10px 15px;
@@ -1760,13 +1964,12 @@ select {
 
   .main-title {
     font-size: 62px;
+
     letter-spacing: -2px;
   }
 
 
-  /* =====================================================
-     SMALL PHONE GANPATI
-  ===================================================== */
+  /* Ganpati */
 
   .ganpati-container {
     margin-top: 25px;
@@ -1797,8 +2000,6 @@ select {
       12px;
   }
 
-  /* Bappa anchored at bottom */
-
   .ganpati-image {
     width: 82%;
     height: 82%;
@@ -1826,9 +2027,15 @@ select {
     width: 165px;
   }
 
+  .tap-button {
+    width: 130px;
+    height: 130px;
+  }
+
   .opening-circle {
     width: 130px;
     height: 130px;
+
     font-size: 14px;
   }
 
@@ -1849,6 +2056,7 @@ select {
 
   .text-card {
     font-size: 13px;
+
     padding: 28px 16px;
   }
 
@@ -1891,7 +2099,9 @@ select {
 
   .maps-button {
     width: 230px;
+
     height: 64px;
+
     font-size: 17px;
   }
 
@@ -1903,7 +2113,7 @@ select {
 
 /* =========================================================
    EXTRA SMALL DEVICES
-   ONLY RESPONSIVE CHANGES
+   330px and below
 ========================================================= */
 
 @media (max-width: 330px) {
@@ -1940,9 +2150,6 @@ select {
       11px;
   }
 
-
-  /* Bappa anchored at bottom */
-
   .ganpati-image {
     width: 82%;
     height: 82%;
@@ -1971,7 +2178,13 @@ select {
   .opening-circle {
     width: 120px;
     height: 120px;
+
     font-size: 13px;
+  }
+
+  .tap-button {
+    width: 120px;
+    height: 120px;
   }
 
   .opening-divider {
@@ -1990,10 +2203,93 @@ select {
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+
     animation-iteration-count: 1 !important;
 
     transition-duration: 0.01ms !important;
 
     scroll-behavior: auto !important;
   }
+}
+/* =================================
+   FULL HEIGHT MOBILE SCROLLBAR
+   ================================= */
+
+.custom-scrollbar {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 16px;
+
+  z-index: 99999;
+
+  display: none;
+
+  padding: 6px 4px;
+
+  pointer-events: none;
+}
+
+
+/* Full Height Track */
+
+.scroll-track {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  background: #29121d;
+
+  border-radius: 20px;
+}
+
+
+/* Draggable Scroll Thumb */
+
+.scroll-thumb {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 75px;
+
+  background: #e85d04;
+
+  border-radius: 20px;
+
+  cursor: grab;
+
+  touch-action: none;
+
+  user-select: none;
+
+  pointer-events: auto;
+
+  transition: background 0.2s;
+}
+
+
+/* When Touching */
+
+.scroll-thumb.dragging {
+  background: #ff8c42;
+
+  cursor: grabbing;
+}
+
+
+/* Mobile Only */
+
+@media (max-width: 768px) {
+
+  .custom-scrollbar {
+    display: block;
+  }
+
 }
